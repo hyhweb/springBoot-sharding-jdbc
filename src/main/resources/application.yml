@@ -1,0 +1,46 @@
+#mybatis:
+#  mapper-locations: classpath:mappers/*.xml
+#  type-aliases-package: com.springboot.shadingjdbc.entity
+#
+#spring:
+#
+#  shardingsphere:
+#    datasource:
+#      names: ds0,ds1
+#      ds0:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/ds0?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+#        username: root
+#        password: 123456
+#      ds1:
+#        type: com.zaxxer.hikari.HikariDataSource
+#        driver-class-name: com.mysql.cj.jdbc.Driver
+#        jdbc-url: jdbc:mysql://localhost:3306/ds1?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+#        username: root
+#        password: 123456
+#
+#  sharding:
+#    default-database-strategy:
+#      inline:
+#        algorithm-expression: ds$->{gender % 2}
+#        sharding-column: gender
+#    tables:
+#      t_user:
+#        actual-data-nodes: ds$->{0..1}.t_user_$->{0..1}
+#        ## 生成分布式主键
+#        key-generator:
+#          column: user_id
+#          type: SNOWFLAKE
+#        database-strategy:
+#          inline:
+#            sharding-column: user_id
+#            algorithm-expression: ds$->{user_id % 2}
+#        table-strategy:
+#          inline:
+#            sharding-column: user_id
+#            algorithm-expression: t_user_$->{user_id % 2}
+#
+#  props:
+#    sql:
+#      show: true
