@@ -1,6 +1,6 @@
 package com.springboot.shadingjdbc.service.impl;
 
-import com.springboot.shadingjdbc.entity.User;
+import com.springboot.shadingjdbc.entity.system.User;
 import com.springboot.shadingjdbc.repository.UserRepository;
 import com.springboot.shadingjdbc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

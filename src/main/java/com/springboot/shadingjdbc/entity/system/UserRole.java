@@ -1,4 +1,4 @@
-package com.springboot.shadingjdbc.entity;
+package com.springboot.shadingjdbc.entity.system;
 
 import java.io.Serializable;
 

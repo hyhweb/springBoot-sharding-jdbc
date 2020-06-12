@@ -1,7 +1,7 @@
 package com.springboot.shadingjdbc.service.impl;
 
-import com.springboot.shadingjdbc.entity.User;
-import com.springboot.shadingjdbc.entity.UserRole;
+import com.springboot.shadingjdbc.entity.system.User;
+import com.springboot.shadingjdbc.entity.system.UserRole;
 import com.springboot.shadingjdbc.repository.UserRoleRepository;
 import com.springboot.shadingjdbc.service.UserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,7 +1,7 @@
 package com.springboot.shadingjdbc.service;
 
-import com.springboot.shadingjdbc.entity.User;
-import com.springboot.shadingjdbc.entity.UserRole;
+import com.springboot.shadingjdbc.entity.system.User;
+import com.springboot.shadingjdbc.entity.system.UserRole;
 
 import java.util.List;
 

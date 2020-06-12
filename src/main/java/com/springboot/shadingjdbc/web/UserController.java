@@ -1,7 +1,7 @@
 package com.springboot.shadingjdbc.web;
 
-import com.springboot.shadingjdbc.entity.User;
-import com.springboot.shadingjdbc.entity.UserRole;
+import com.springboot.shadingjdbc.entity.system.User;
+import com.springboot.shadingjdbc.entity.system.UserRole;
 import com.springboot.shadingjdbc.service.UserRoleService;
 import com.springboot.shadingjdbc.service.UserService;
 import org.slf4j.Logger;
